@@ -34,16 +34,17 @@ namespace UnityStandardAssets.Utility
 
         private void OnEnable()
         {
-            EditorApplication.update += Update;
             EditorUserBuildSettings.activeBuildTargetChanged += Update;
+            EditorApplication.update += Update;
         }
 
 
         private void OnDisable()
         {
-            EditorApplication.update -= Update;
             EditorUserBuildSettings.activeBuildTargetChanged -= Update;
+            EditorApplication.update -= Update;
         }
+
 
         private void Update()
         {
