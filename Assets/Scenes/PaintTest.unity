@@ -156,9 +156,9 @@ MonoBehaviour:
     type: 2}
   maxBackwardAngle: 1.3089969
   forwardAngleRatio: 1
-  maxBalls: 10
-  minSize: 0.02
-  maxSize: 0.2
+  maxBalls: 20
+  minSize: 0.05
+  maxSize: 0.25
   minSpeed: 10
   maxSpeed: 15
   handLength: 0.6

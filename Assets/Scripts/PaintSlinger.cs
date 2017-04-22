@@ -8,9 +8,9 @@ public class PaintSlinger : MonoBehaviour {
     public GameObject paintballPrefab;
     public float maxBackwardAngle = 75 * Mathf.Deg2Rad;
     public float forwardAngleRatio = 1;
-    public int maxBalls = 10;
-    public float minSize = 0.02f;
-    public float maxSize = 0.2f;
+    public int maxBalls = 20;
+    public float minSize = 0.05f;
+    public float maxSize = 0.25f;
     public float minSpeed = 10;
     public float maxSpeed = 15;
     public float handLength = 0.6f;
@@ -53,9 +53,8 @@ public class PaintSlinger : MonoBehaviour {
         {
             Vector2 mousePosition = new Vector2(2 * (Input.mousePosition.x / Screen.width) - 1,
                                                 2 * (Input.mousePosition.y / Screen.height) - 1);
-            Debug.Log(mousePosition);
             float d = mousePosition.magnitude / Mathf.Sqrt(2);
-
+            float angle = Mathf.Atan2(mousePosition.y, mousePosition.x);
 
             float alpha = d * maxBackwardAngle;
             float beta = forwardAngleRatio * alpha;
@@ -64,19 +63,24 @@ public class PaintSlinger : MonoBehaviour {
 
             for (int i = 0; i < balls; i++)
             {
-                float p = (float)i / (float)balls;
+                float p = i / (float)balls;
                 float phi = i * phi_step;
-                float angle = phi - alpha;
+                float ballAngle = phi - alpha;
 
-                Vector3 ballPos = new Vector3(Mathf.Cos(angle), handHeight, Mathf.Sin(angle));
+                Vector3 ballPos = new Vector3(Mathf.Cos(ballAngle), 0, Mathf.Sin(ballAngle));
                 float ballSize = minSize + Mathf.Sin(Mathf.PI * p) * (maxSize - minSize);
                 float ballSpeed = minSpeed + Mathf.Sin(Mathf.PI * p) * (maxSpeed - minSpeed);
-                Vector3 ballVelocity = ballSpeed * new Vector3(-Mathf.Sin(angle), 0, Mathf.Cos(angle));
+                Vector3 ballVelocity = ballSpeed * new Vector3(-Mathf.Sin(ballAngle), 0, Mathf.Cos(ballAngle));
 
-                GameObject ball = Instantiate<GameObject>(paintballPrefab, this.transform.TransformPoint(ballPos), Quaternion.identity);
+                ballPos = new Vector3(ballPos.x * Mathf.Cos(angle), ballPos.x * Mathf.Sin(angle), ballPos.z);
+                ballVelocity = new Vector3(ballVelocity.x * Mathf.Cos(angle), ballVelocity.x * Mathf.Sin(angle), ballVelocity.z);
+
+                Vector3 ballWorldPos = this.transform.TransformPoint(ballPos + handHeight * this.transform.up);
+                Vector3 ballWorldVelocity = this.transform.TransformVector(ballVelocity);
+
+                GameObject ball = Instantiate<GameObject>(paintballPrefab, ballWorldPos, Quaternion.identity);
                 ball.transform.localScale = new Vector3(ballSize, ballSize, ballSize);
-                ball.GetComponent<Rigidbody>().velocity = this.transform.TransformVector(ballVelocity);
-
+                ball.GetComponent<Rigidbody>().velocity = ballWorldVelocity;
             }
 
             EnableMouseLook();
