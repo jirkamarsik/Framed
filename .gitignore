@@ -43,3 +43,9 @@ PlayMaker.dll
 PlayMaker.dll.mdb
 PlayMaker.dll.mdb.meta
 PlayMaker.dll.meta
+
+# Exclude F# scripting extraneous files
+GameCode/obj
+Assets/Frameworks/FSharp.Core.xml*
+Assets/Frameworks/GameCode.dll.mdb*
+Assets/Frameworks/GameCode.pdb*
