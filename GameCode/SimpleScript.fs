@@ -2,18 +2,13 @@
  
 open UnityEngine
 
-type SimpleScript() = 
+type PaintballShooter() = 
     inherit MonoBehaviour()
  
-    // Inspector pane property
     [<SerializeField>]
-    let mutable numCubes = 3
- 
-    // Use the Unity3D API
-    let spawnCube x =
-        let cube = GameObject.CreatePrimitive(PrimitiveType.Cube)
-        cube.transform.position <- new Vector3(x, 0.0f, 0.0f)
- 
-    member this.Start() =
-        // Spawn the number of cubes specified in the Inspector pane
-        [1..numCubes] |> List.map (fun x -> float32 x * 1.5f) |> List.iter spawnCube
+    let mutable paintballPrefab : GameObject = null
+
+    member this.Update() =
+        if Input.GetMouseButtonDown(0) then
+            let newBall = Object.Instantiate(paintballPrefab, this.transform.position, this.transform.rotation) :?> GameObject
+            newBall.GetComponent<Rigidbody>().velocity <- new Vector3(0.0f, 5.0f, 0.0f)
