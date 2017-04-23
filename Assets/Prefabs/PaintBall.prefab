@@ -110,11 +110,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splashBrush:
     brushTexture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
+    brushNormalTexture: {fileID: 2800000, guid: 945b831b22eb06945bf77e00f16ff51a,
+      type: 3}
+    brushHeightTexture: {fileID: 2800000, guid: e1d77a6a5022d4442814ccb50d2a5d9d,
+      type: 3}
     brushScale: 0.2
-    brushNormalBlend: 0
-    brushHeightBlend: 0
+    brushNormalBlend: 0.1
+    brushHeightBlend: 0.1
     brushColor: {r: 1, g: 0, b: 0, a: 1}
     colorBlendType: 0
     normalBlendType: 0
