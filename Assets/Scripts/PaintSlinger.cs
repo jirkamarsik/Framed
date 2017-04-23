@@ -14,7 +14,7 @@ public class PaintSlinger : MonoBehaviour {
     public float minSpeed = 10;
     public float maxSpeed = 15;
     public float handLength = 0.6f;
-    public float handHeight = 1.4f;
+    public Vector3 handOffset = new Vector3(0, 1.4f, 0.3f);
 
     private MouseLook mouseLook;
     private float prevXSensitivity;
@@ -75,7 +75,7 @@ public class PaintSlinger : MonoBehaviour {
                 ballPos = new Vector3(ballPos.x * Mathf.Cos(angle), ballPos.x * Mathf.Sin(angle), ballPos.z);
                 ballVelocity = new Vector3(ballVelocity.x * Mathf.Cos(angle), ballVelocity.x * Mathf.Sin(angle), ballVelocity.z);
 
-                Vector3 ballWorldPos = this.transform.TransformPoint(ballPos + handHeight * this.transform.up);
+                Vector3 ballWorldPos = this.transform.TransformPoint(ballPos + handOffset);
                 Vector3 ballWorldVelocity = this.transform.TransformVector(ballVelocity);
 
                 GameObject ball = Instantiate<GameObject>(paintballPrefab, ballWorldPos, Quaternion.identity);
