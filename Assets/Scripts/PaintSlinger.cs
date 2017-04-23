@@ -24,7 +24,6 @@ public class PaintSlinger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mouseLook = this.GetComponent<FirstPersonController>().m_MouseLook;
-        Physics.IgnoreLayerCollision(8, 8);
 	}
 
     private void DisableMouseLook()
