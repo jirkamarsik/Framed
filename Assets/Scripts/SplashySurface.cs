@@ -28,7 +28,6 @@ public class SplashySurface : MonoBehaviour {
             RaycastHit hit;
             ContactPoint contact = collision.contacts[0];
             Physics.Linecast(contact.point, contact.point + contact.normal, out hit, ~LayerMask.NameToLayer("SplashySurfaces"));
-            // Physics.Raycast(collision.contacts[0].point, collision.contacts[0].normal, out hit, 10, ~LayerMask.NameToLayer("SplashySurfaces"));
             SmearDroplet(hit.textureCoord, collision.gameObject);
             Destroy(collision.gameObject);
         }
