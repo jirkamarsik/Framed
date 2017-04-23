@@ -1834,7 +1834,7 @@ ModelImporter:
       name: rig|Move
       takeName: rig|Move
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
