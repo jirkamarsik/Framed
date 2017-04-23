@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 135489777089693810}
   - component: {fileID: 23816136431933434}
   - component: {fileID: 54518750589629558}
+  - component: {fileID: 114320634171998324}
   m_Layer: 8
   m_Name: PaintBall
   m_TagString: PaintBall
@@ -96,6 +97,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &114320634171998324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544336307084908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73adc7b1abbb96d48960f413243eb560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splashBrush:
+    brushTexture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
+    brushNormalTexture: {fileID: 0}
+    brushHeightTexture: {fileID: 0}
+    brushScale: 0.2
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 1, g: 0, b: 0, a: 1}
+    colorBlendType: 0
+    normalBlendType: 0
+    heightBlendType: 0
+  splashScale: 0.2
 --- !u!135 &135489777089693810
 SphereCollider:
   m_ObjectHideFlags: 1
