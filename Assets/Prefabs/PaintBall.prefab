@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 135489777089693810}
   - component: {fileID: 23816136431933434}
   - component: {fileID: 54518750589629558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PaintBall
   m_TagString: PaintBall
   m_Icon: {fileID: 0}
