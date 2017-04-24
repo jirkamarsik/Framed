@@ -15,6 +15,7 @@ public class PaintSlinger : MonoBehaviour {
     public float maxSpeed = 15;
     public float handLength = 0.6f;
     public Vector3 handOffset = new Vector3(0, 1.4f, 0.3f);
+    public float maxPotatoRotation = 10f;
 
     private MouseLook mouseLook;
     private float prevXSensitivity;
@@ -81,6 +82,9 @@ public class PaintSlinger : MonoBehaviour {
                 GameObject ball = Instantiate<GameObject>(paintballPrefab, ballWorldPos, Quaternion.identity);
                 ball.transform.localScale = new Vector3(ballSize, ballSize, ballSize);
                 ball.GetComponent<Rigidbody>().velocity = ballWorldVelocity;
+                ball.GetComponent<Rigidbody>().AddTorque(Random.Range(0, maxPotatoRotation),
+                                                         Random.Range(0, maxPotatoRotation),
+                                                         Random.Range(0, maxPotatoRotation));
             }
 
             EnableMouseLook();
