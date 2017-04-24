@@ -141,7 +141,8 @@ namespace Es.InkPainter
 		private int paintUVPropertyID;
 
 		private int brushTexturePropertyID;
-		private int brushScalePropertyID;
+		private int brushScaleUPropertyID;
+		private int brushScaleVPropertyID;
 		private int brushColorPropertyID;
 		private int brushNormalTexturePropertyID;
 		private int brushNormalBlendPropertyID;
@@ -245,7 +246,8 @@ namespace Es.InkPainter
 			}
 			paintUVPropertyID = Shader.PropertyToID("_PaintUV");
 			brushTexturePropertyID = Shader.PropertyToID("_Brush");
-			brushScalePropertyID = Shader.PropertyToID("_BrushScale");
+			brushScaleUPropertyID = Shader.PropertyToID("_BrushScaleU");
+			brushScaleVPropertyID = Shader.PropertyToID("_BrushScaleV");
 			brushColorPropertyID = Shader.PropertyToID("_ControlColor");
 			brushNormalTexturePropertyID = Shader.PropertyToID("_BrushNormal");
 			brushNormalBlendPropertyID = Shader.PropertyToID("_NormalBlend");
@@ -356,7 +358,8 @@ namespace Es.InkPainter
 		{
 			paintMainMaterial.SetVector(paintUVPropertyID, uv);
 			paintMainMaterial.SetTexture(brushTexturePropertyID, brush.BrushTexture);
-			paintMainMaterial.SetFloat(brushScalePropertyID, brush.Scale);
+			paintMainMaterial.SetFloat(brushScaleUPropertyID, brush.ScaleU);
+			paintMainMaterial.SetFloat(brushScaleVPropertyID, brush.ScaleV);
 			paintMainMaterial.SetVector(brushColorPropertyID, brush.Color);
 
 			foreach(var key in paintMainMaterial.shaderKeywords)
@@ -395,7 +398,8 @@ namespace Es.InkPainter
 			paintNormalMaterial.SetVector(paintUVPropertyID, uv);
 			paintNormalMaterial.SetTexture(brushTexturePropertyID, brush.BrushTexture);
 			paintNormalMaterial.SetTexture(brushNormalTexturePropertyID, brush.BrushNormalTexture);
-			paintNormalMaterial.SetFloat(brushScalePropertyID, brush.Scale);
+			paintNormalMaterial.SetFloat(brushScaleUPropertyID, brush.ScaleU);
+			paintNormalMaterial.SetFloat(brushScaleVPropertyID, brush.ScaleV);
 			paintNormalMaterial.SetFloat(brushNormalBlendPropertyID, brush.NormalBlend);
 
 			foreach(var key in paintNormalMaterial.shaderKeywords)
@@ -438,7 +442,8 @@ namespace Es.InkPainter
 			paintHeightMaterial.SetVector(paintUVPropertyID, uv);
 			paintHeightMaterial.SetTexture(brushTexturePropertyID, brush.BrushTexture);
 			paintHeightMaterial.SetTexture(brushHeightTexturePropertyID, brush.BrushHeightTexture);
-			paintHeightMaterial.SetFloat(brushScalePropertyID, brush.Scale);
+			paintHeightMaterial.SetFloat(brushScaleUPropertyID, brush.ScaleU);
+			paintHeightMaterial.SetFloat(brushScaleVPropertyID, brush.ScaleV);
 			paintHeightMaterial.SetFloat(brushHeightBlendPropertyID, brush.HeightBlend);
 			paintHeightMaterial.SetVector(brushHeightColorPropertyID, brush.Color);
 

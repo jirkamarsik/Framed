@@ -5,7 +5,9 @@
 		[HideInInspector]
 		_Brush("Brush", 2D) = "white"
 		[HideInInspector]
-		_BrushScale("BrushScale", FLOAT) = 0.1
+		_BrushScaleU("BrushScaleU", FLOAT) = 0.1
+		[HideInInspector]
+		_BrushScaleV("BrushScaleV", FLOAT) = 0.1
 		[HideInInspector]
 		_ControlColor("ControlColor", VECTOR) = (0,0,0,0)
 		[HideInInspector]
@@ -33,7 +35,8 @@
 			sampler2D _MainTex;
 			sampler2D _Brush;
 			float4 _PaintUV;
-			float _BrushScale;
+			float _BrushScaleU;
+			float _BrushScaleV;
 			float4 _ControlColor;
 		ENDCG
 
@@ -51,12 +54,13 @@
 			}
 
 			float4 frag(v2f i) : SV_TARGET {
-				float h = _BrushScale;
+				float h_u = _BrushScaleU;
+				float h_v = _BrushScaleV;
 				float4 base = SampleTexture(_MainTex, i.uv.xy);
 				float4 brushColor = float4(1, 1, 1, 1);
 
-				if (IsPaintRange(i.uv, _PaintUV, h)) {
-					float2 uv = CalcBrushUV(i.uv, _PaintUV, h);
+				if (IsPaintRange(i.uv, _PaintUV, h_u, h_v)) {
+					float2 uv = CalcBrushUV(i.uv, _PaintUV, h_u, h_v);
 					brushColor = SampleTexture(_Brush, uv.xy);
 
 					return INK_PAINTER_COLOR_BLEND(base, brushColor, _ControlColor);

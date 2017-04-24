@@ -112,7 +112,10 @@ namespace Es.InkPainter
 		private Texture brushHeightTexture;
 
 		[SerializeField, Range(0, 1)]
-		private float brushScale = 0.1f;
+		private float brushScaleU = 0.1f;
+
+		[SerializeField, Range(0, 1)]
+		private float brushScaleV = 0.1f;
 
 		[SerializeField, Range(0, 1)]
 		private float brushNormalBlend = 0.1f;
@@ -165,8 +168,28 @@ namespace Es.InkPainter
 		/// </summary>
 		public float Scale
 		{
-			get { return Mathf.Clamp01(brushScale); }
-			set { brushScale = Mathf.Clamp01(value); }
+			get { return Mathf.Clamp01(Mathf.Max(brushScaleU, brushScaleV)); }
+			set { brushScaleU = Mathf.Clamp01(value); brushScaleV = Mathf.Clamp01(value); }
+		}
+	
+		/// <summary>
+		/// The size of the brush in the U dimension of the UV coords.
+		/// It takes a range from 0 to 1.
+		/// </summary>
+		public float ScaleU
+		{
+			get { return Mathf.Clamp01(brushScaleU); }
+			set { brushScaleU = Mathf.Clamp01(value); }
+		}
+
+		/// <summary>
+		/// The size of the brush in the V dimension of the UV coords.
+		/// It takes a range from 0 to 1.
+		/// </summary>
+		public float ScaleV
+		{
+			get { return Mathf.Clamp01(brushScaleV); }
+			set { brushScaleV = Mathf.Clamp01(value); }
 		}
 
 		/// <summary>
@@ -225,29 +248,30 @@ namespace Es.InkPainter
 			set { heightBlendType = value; }
 		}
 
-		public Brush(Texture brushTex, float scale, Color color)
+		public Brush(Texture brushTex, float scaleU, float scaleV, Color color)
 		{
 			BrushTexture = brushTex;
-			Scale = scale;
+			ScaleU = scaleU;
+			ScaleV = scaleV;
 			Color = color;
 		}
 
-		public Brush(Texture brushTex, float scale, Color color, Texture normalTex, float normalBlend)
-		  : this(brushTex, scale, color)
+		public Brush(Texture brushTex, float scaleU, float scaleV, Color color, Texture normalTex, float normalBlend)
+		  : this(brushTex, scaleU, scaleV, color)
 		{
 			BrushNormalTexture = normalTex;
 			NormalBlend = normalBlend;
 		}
 
-		public Brush(Texture brushTex, float scale, Color color, Texture normalTex, float normalBlend, ColorBlendType colorBlending, NormalBlendType normalBlending)
-		: this(brushTex, scale, color, normalTex, normalBlend)
+		public Brush(Texture brushTex, float scaleU, float scaleV, Color color, Texture normalTex, float normalBlend, ColorBlendType colorBlending, NormalBlendType normalBlending)
+		: this(brushTex, scaleU, scaleV, color, normalTex, normalBlend)
 		{
 			ColorBlending = colorBlending;
 			NormalBlending = normalBlending;
 		}
 
-		public Brush(Texture brushTex, float scale, Color color, Texture normalTex, float normalBlend, Texture heightTex, float heightBlend, ColorBlendType colorBlending, NormalBlendType normalBlending, HeightBlendType heightBlending)
-		: this(brushTex, scale, color, normalTex, normalBlend, colorBlending, normalBlending)
+		public Brush(Texture brushTex, float scaleU, float scaleV, Color color, Texture normalTex, float normalBlend, Texture heightTex, float heightBlend, ColorBlendType colorBlending, NormalBlendType normalBlending, HeightBlendType heightBlending)
+		: this(brushTex, scaleU, scaleV, color, normalTex, normalBlend, colorBlending, normalBlending)
 		{
 			BrushHeightTexture = heightTex;
 			HeightBlend = heightBlend;

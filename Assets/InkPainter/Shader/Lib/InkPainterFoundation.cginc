@@ -9,19 +9,19 @@ float4 SampleTexture(sampler2D tex, float2 uv) {
 #endif
 }
 
-bool IsPaintRange(float2 mainUV, float2 paintUV, float brushScale) {
+bool IsPaintRange(float2 mainUV, float2 paintUV, float brushScaleU, float brushScaleV) {
 	return
-		paintUV.x - brushScale < mainUV.x &&
-		mainUV.x < paintUV.x + brushScale &&
-		paintUV.y - brushScale < mainUV.y &&
-		mainUV.y < paintUV.y + brushScale;
+		paintUV.x - brushScaleU < mainUV.x &&
+		mainUV.x < paintUV.x + brushScaleU &&
+		paintUV.y - brushScaleV < mainUV.y &&
+		mainUV.y < paintUV.y + brushScaleV;
 }
 
-float2 CalcBrushUV(float2 mainUV, float2 paintUV, float brushScale) {
+float2 CalcBrushUV(float2 mainUV, float2 paintUV, float brushScaleU, float brushScaleV) {
 #if UNITY_UV_STARTS_AT_TOP
-	return (mainUV - paintUV) / brushScale * 0.5 + 0.5;
+	return (mainUV - paintUV) / float2(brushScaleU, brushScaleV) * 0.5 + 0.5;
 #else
-	return (paintUV - mainUV) / brushScale * 0.5 + 0.5;
+	return (paintUV - mainUV) / float2(brushScaleU, brushScaleV) * 0.5 + 0.5;
 #endif
 }
 

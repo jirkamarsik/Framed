@@ -7,7 +7,9 @@
 		[HideInInspector]
 		_BrushNormal("BrushNormal", 2D) = "white"
 		[HideInInspector]
-		_BrushScale("BrushScale", FLOAT) = 0.1
+		_BrushScaleU("BrushScaleU", FLOAT) = 0.1
+		[HideInInspector]
+		_BrushScaleV("BrushScaleV", FLOAT) = 0.1
 		[HideInInspector]
 		_PaintUV("Hit UV Position", VECTOR) = (0,0,0,0)
 		[HideInInspector]
@@ -36,7 +38,8 @@
 			sampler2D _Brush;
 			sampler2D _BrushNormal;
 			float4 _PaintUV;
-			float _BrushScale;
+			float _BrushScaleU;
+			float _BrushScaleV;
 			float _NormalBlend;
 		ENDCG
 
@@ -54,15 +57,16 @@
 			}
 
 			float4 frag(v2f i) : SV_TARGET {
-				float h = _BrushScale;
+				float h_u = _BrushScaleU;
+				float h_v = _BrushScaleV;
 				float4 base = SampleTexture(_MainTex, i.uv.xy);
 
-				if (IsPaintRange(i.uv, _PaintUV, h)) {
-					float2 uv = CalcBrushUV(i.uv, _PaintUV, h);
+				if (IsPaintRange(i.uv, _PaintUV, h_u, h_v)) {
+					float2 uv = CalcBrushUV(i.uv, _PaintUV, h_u, h_v);
 					float4 brushColor = SampleTexture(_Brush, uv.xy);
 
 					if (brushColor.a > 0) {
-						float2 normalUV = CalcBrushUV(i.uv, _PaintUV, h);
+						float2 normalUV = CalcBrushUV(i.uv, _PaintUV, h_u, h_v);
 						float4 normal = SampleTexture(_BrushNormal, normalUV.xy);
 						return INK_PAINTER_NORMAL_BLEND(base, normal, _NormalBlend, brushColor.a);
 					}
