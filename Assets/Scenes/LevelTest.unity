@@ -7379,7 +7379,7 @@ TextMesh:
   m_FontSize: 20
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 90dcf6602473f664cb74b7ea14473686, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4279024889
@@ -7396,7 +7396,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 90dcf6602473f664cb74b7ea14473686, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8595,7 +8595,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811352545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 113743142}
@@ -8630,19 +8630,19 @@ GUIText:
   m_GameObject: {fileID: 820760202}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: TEST
+  m_Text: 
   m_Anchor: 1
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 90dcf6602473f664cb74b7ea14473686, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 60
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4279024889
+    rgba: 4278190080
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!114 &820760204
@@ -8667,8 +8667,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 51.945312
-        y: 329.01562
+        x: 55.164062
+        y: 245.92969
         width: 100
         height: 32
       isBreakpoint: 0
@@ -8779,8 +8779,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 689.34375
-        y: 747.60156
+        x: 753.34375
+        y: 683.60156
         width: 159
         height: 32
       isBreakpoint: 0
@@ -9034,8 +9034,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 131
-        y: 412.98438
+        x: 195
+        y: 348.98438
         width: 177
         height: 32
       isBreakpoint: 0
@@ -9052,15 +9052,17 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetProperty
         - HutongGames.PlayMaker.Actions.SetGUIText
         - HutongGames.PlayMaker.Actions.GetMouseButtonUp
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 599a930534b46c04
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000005000000
+        actionHashCodes: 5ac85204599a930534b46c04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -9076,7 +9078,139 @@ MonoBehaviour:
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
-        fsmPropertyParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: UnityEngine.Object
+            value: {fileID: 820760203}
+          TargetTypeName: UnityEngine.GUIText
+          PropertyName: fontSize
+          BoolParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 20
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Int32
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 1
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
@@ -9105,13 +9239,15 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 000100000001
+        byteData: 00000100000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000000100000007000000170000001100000001000000
+        paramDataType: 240000000100000014000000120000000100000007000000170000001100000001000000
         paramName:
+        - targetProperty
+        - everyFrame
         - gameObject
         - text
         - everyFrame
@@ -9119,15 +9255,15 @@ MonoBehaviour:
         - sendEvent
         - storeResult
         - inUpdateOnly
-        paramDataPos: 00000000000000000000000001000000000000000000000005000000
-        paramByteDataSize: 00000000000000000100000004000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000002000000000000000000000006000000
+        paramByteDataSize: 000000000100000000000000000000000100000004000000000000000000000001000000
     - name: Controls Tutorial - paint
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 129
-        y: 525
+        x: 193
+        y: 461
         width: 177
         height: 32
       isBreakpoint: 0
@@ -9218,8 +9354,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 132
-        y: 461
+        x: 196
+        y: 397
         width: 220
         height: 32
       isBreakpoint: 0
@@ -9290,8 +9426,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 158.38281
-        y: 632.3281
+        x: 222.38281
+        y: 568.3281
         width: 168
         height: 32
       isBreakpoint: 0
@@ -9310,26 +9446,16 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetGUIText
         - HutongGames.PlayMaker.Actions.Wait
-        - HutongGames.PlayMaker.Actions.SetGUIText
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 599a930548c01101599a9305
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 599a930548c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -9351,12 +9477,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: Paint your way through the game
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -9377,12 +9497,12 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 000000
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000010000000f0000001700000001000000140000001200000001000000
+        paramDataType: 1400000012000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - text
@@ -9390,18 +9510,15 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        - gameObject
-        - text
-        - everyFrame
-        paramDataPos: 000000000000000000000000000000000000000001000000010000000100000002000000
-        paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000000000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
     - name: Controls Tutorial - paint - wait 2
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 131.39844
-        y: 576.4375
+        x: 195.39844
+        y: 512.4375
         width: 233
         height: 32
       isBreakpoint: 0
@@ -9472,8 +9589,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 162.34375
-        y: 688.8906
+        x: 226.34375
+        y: 624.8906
         width: 227
         height: 32
       isBreakpoint: 0
@@ -9484,7 +9601,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Start Levels
+        toState: State 1
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -9551,8 +9668,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 682.0469
-        y: 828.28906
+        x: 746.0469
+        y: 764.28906
         width: 159
         height: 32
       isBreakpoint: 0
@@ -9806,8 +9923,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 668.5078
-        y: 912.1406
+        x: 732.5078
+        y: 848.1406
         width: 165
         height: 32
       isBreakpoint: 0
@@ -10061,8 +10178,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 413.75
-        y: 824.9453
+        x: 477.75
+        y: 760.9453
         width: 115
         height: 80
       isBreakpoint: 0
@@ -10289,8 +10406,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 253.01562
-        y: 327.79688
+        x: 220.79688
+        y: 246
         width: 100
         height: 32
       isBreakpoint: 0
@@ -10301,7 +10418,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Controls Tutorial - color
+        toState: Fade In
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -10621,8 +10738,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 475.16406
-        y: 1007.8125
+        x: 539.16406
+        y: 943.8125
         width: 100
         height: 16
       isBreakpoint: 0
@@ -11090,8 +11207,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 537.52344
-        y: 248.28125
+        x: 601.52344
+        y: 184.28125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -11219,8 +11336,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 771.5469
-        y: 251.8125
+        x: 835.5469
+        y: 187.8125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -11348,8 +11465,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 531.5078
-        y: 103.72656
+        x: 598.02344
+        y: 100.46094
         width: 100
         height: 32
       isBreakpoint: 0
@@ -11360,7 +11477,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Start Levels - clean GUI
+        toState: Level 1
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -11439,8 +11556,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 496.79688
-        y: 179.14844
+        x: 816.47656
+        y: 112.59375
         width: 179
         height: 32
       isBreakpoint: 0
@@ -11451,7 +11568,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Level 1
+        toState: Level 2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -11518,8 +11635,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1016.1953
-        y: 251
+        x: 1080.1953
+        y: 187
         width: 100
         height: 32
       isBreakpoint: 0
@@ -11647,8 +11764,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1289.5078
-        y: 247.03125
+        x: 1353.5078
+        y: 183.03125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -11776,8 +11893,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1603.625
-        y: 247.53906
+        x: 1667.625
+        y: 183.53906
         width: 100
         height: 48
       isBreakpoint: 0
@@ -11957,8 +12074,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 518.6953
-        y: 301.22656
+        x: 582.6953
+        y: 237.22656
         width: 190
         height: 32
       isBreakpoint: 0
@@ -12212,8 +12329,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 565.83594
-        y: 357.29688
+        x: 629.83594
+        y: 293.29688
         width: 100
         height: 32
       isBreakpoint: 0
@@ -12224,7 +12341,7 @@ MonoBehaviour:
           name: Next Level
           isSystemEvent: 0
           isGlobal: 0
-        toState: Level 2
+        toState: Start Levels - clean GUI
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -12295,8 +12412,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 758.625
-        y: 302.59375
+        x: 822.625
+        y: 238.59375
         width: 190
         height: 32
       isBreakpoint: 0
@@ -12550,8 +12667,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 786.66406
-        y: 352.57812
+        x: 850.66406
+        y: 288.57812
         width: 100
         height: 32
       isBreakpoint: 0
@@ -12633,8 +12750,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1002.0547
-        y: 304.35938
+        x: 1066.0547
+        y: 240.35938
         width: 196
         height: 32
       isBreakpoint: 0
@@ -12888,8 +13005,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1037.8594
-        y: 360.9375
+        x: 1101.8594
+        y: 296.9375
         width: 100
         height: 32
       isBreakpoint: 0
@@ -12971,8 +13088,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1241.1328
-        y: 304.57812
+        x: 1305.1328
+        y: 240.57812
         width: 207
         height: 32
       isBreakpoint: 0
@@ -13226,8 +13343,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1241.2344
-        y: 365.10938
+        x: 1305.2344
+        y: 301.10938
         width: 213
         height: 32
       isBreakpoint: 0
@@ -13481,8 +13598,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1240.8828
-        y: 419.0547
+        x: 1304.8828
+        y: 355.0547
         width: 219
         height: 32
       isBreakpoint: 0
@@ -13736,8 +13853,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1250.0938
-        y: 483.96875
+        x: 1314.0938
+        y: 419.96875
         width: 100
         height: 32
       isBreakpoint: 0
@@ -13819,8 +13936,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1250.1094
-        y: 543.5781
+        x: 1314.1094
+        y: 479.57812
         width: 207
         height: 32
       isBreakpoint: 0
@@ -14074,8 +14191,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1250.1094
-        y: 600.53125
+        x: 1314.1094
+        y: 536.53125
         width: 220
         height: 32
       isBreakpoint: 0
@@ -14329,8 +14446,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1247.5781
-        y: 656.2422
+        x: 1311.5781
+        y: 592.2422
         width: 213
         height: 32
       isBreakpoint: 0
@@ -14584,8 +14701,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1243.7812
-        y: 717.8125
+        x: 1307.7812
+        y: 653.8125
         width: 219
         height: 32
       isBreakpoint: 0
@@ -14839,8 +14956,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1255.1562
-        y: 795.5781
+        x: 1319.1562
+        y: 731.5781
         width: 100
         height: 32
       isBreakpoint: 0
@@ -14922,8 +15039,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1255.1719
-        y: 855.1875
+        x: 1319.1719
+        y: 791.1875
         width: 207
         height: 32
       isBreakpoint: 0
@@ -15177,8 +15294,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1255.1719
-        y: 912.1406
+        x: 1319.1719
+        y: 848.1406
         width: 220
         height: 32
       isBreakpoint: 0
@@ -15432,8 +15549,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1252.6406
-        y: 967.85156
+        x: 1316.6406
+        y: 903.85156
         width: 213
         height: 32
       isBreakpoint: 0
@@ -15687,8 +15804,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1248.8438
-        y: 1029.4219
+        x: 1312.8438
+        y: 965.4219
         width: 219
         height: 32
       isBreakpoint: 0
@@ -15942,8 +16059,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1248.7266
-        y: 1088.6406
+        x: 1312.7266
+        y: 1024.6406
         width: 232
         height: 32
       isBreakpoint: 0
@@ -16197,8 +16314,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1247.4297
-        y: 1156.8594
+        x: 1311.4297
+        y: 1092.8594
         width: 100
         height: 32
       isBreakpoint: 0
@@ -16280,8 +16397,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1435.6484
-        y: 167.35938
+        x: 1499.6484
+        y: 103.359375
         width: 116
         height: 32
       isBreakpoint: 0
@@ -16354,6 +16471,116 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: Fade In
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 319.17188
+        y: 296.21094
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Controls Tutorial - color
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CameraFadeIn
+        - HutongGames.PlayMaker.Actions.SetGUIText
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000400000007000000
+        actionHashCodes: 54303200599a930548c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Framed
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 4
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 5
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 0, g: 0, b: 0, a: 1}
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        - 
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 190000000f00000017000000010000001400000012000000010000000f0000001700000001000000
+        paramName:
+        - color
+        - time
+        - finishEvent
+        - realTime
+        - gameObject
+        - text
+        - everyFrame
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000010000000100000002000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000001000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -16432,7 +16659,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -21057,7 +21284,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 55.773438
-        y: 252.11719
+        y: 284.1172
         width: 100
         height: 48
       isBreakpoint: 0
@@ -21427,7 +21654,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 328.77344
-        y: 208.07812
+        y: 240.07812
         width: 100
         height: 80
       isBreakpoint: 0
@@ -21747,7 +21974,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 544.77344
-        y: 223.11719
+        y: 255.11719
         width: 100
         height: 32
       isBreakpoint: 0
@@ -21890,7 +22117,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 581.77344
-        y: 170.10938
+        y: 202.10938
         width: 125
         height: 32
       isBreakpoint: 0
@@ -22117,8 +22344,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 420.77344
-        y: 114.92969
+        x: 400.15625
+        y: 112.89844
         width: 100
         height: 32
       isBreakpoint: 0
@@ -22670,7 +22897,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 441.77344
-        y: 379.1172
+        y: 411.1172
         width: 100
         height: 32
       isBreakpoint: 0
@@ -22887,7 +23114,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 459.77344
-        y: 445.1172
+        y: 477.1172
         width: 100
         height: 32
       isBreakpoint: 0
@@ -23104,7 +23331,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 52
-        y: 194.0625
+        y: 226.0625
         width: 100
         height: 32
       isBreakpoint: 0
@@ -23366,7 +23593,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 669
-        y: 289
+        y: 321
         width: 100
         height: 48
       isBreakpoint: 0
@@ -23570,7 +23797,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 761
-        y: 166
+        y: 198
         width: 100
         height: 16
       isBreakpoint: 0
@@ -23741,7 +23968,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -23960,6 +24187,68 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f45a8bf27dfda04499a84eca10dc5fd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1177222034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1177222037}
+  - component: {fileID: 1177222036}
+  - component: {fileID: 1177222035}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1177222035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177222034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1177222036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177222034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &1177222037
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177222034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1253954090 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4689687680427516, guid: 2f45a8bf27dfda04499a84eca10dc5fd,
@@ -32875,10 +33164,10 @@ TextMesh:
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 25f3040e766fce0469beef96498e8e4a, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4279024889
@@ -32895,7 +33184,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 25f3040e766fce0469beef96498e8e4a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34901,7 +35190,7 @@ TextMesh:
   m_FontSize: 40
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 90dcf6602473f664cb74b7ea14473686, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4279024889
@@ -34918,7 +35207,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 90dcf6602473f664cb74b7ea14473686, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
