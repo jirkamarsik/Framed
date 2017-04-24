@@ -10,7 +10,7 @@ namespace Framed.PlaymakerActions {
     public abstract class AbstractCalculateDamage : FsmStateAction
     {
         [HutongGames.PlayMaker.Tooltip("The color of the paintball dealing the damage.")]
-        public FsmColor inputColor;
+        public FsmGameObject inputPaintBall;
         [HutongGames.PlayMaker.Tooltip("Store the damage done in this float variable.")]
         [UIHint(UIHint.Variable)]
         public FsmFloat outputDamage;
@@ -19,13 +19,13 @@ namespace Framed.PlaymakerActions {
 
         public override void OnEnter()
         {
-            outputDamage.Value = CalculateDamage(inputColor.Value);
+            outputDamage.Value = CalculateDamage(inputPaintBall.Value.GetComponent<Renderer>().material.color);
 
             Finish();
         }
     }
 
-    public class CalculateFireDemonDamamge : AbstractCalculateDamage
+    public class CalculateFireDemonDamage : AbstractCalculateDamage
     {
         public override float CalculateDamage(Color color)
         {
@@ -34,7 +34,7 @@ namespace Framed.PlaymakerActions {
     }
 
 
-    public class CalculateWaterDemonDamamge : AbstractCalculateDamage
+    public class CalculateWaterDemonDamage : AbstractCalculateDamage
     {
         public override float CalculateDamage(Color color)
         {
@@ -42,7 +42,7 @@ namespace Framed.PlaymakerActions {
         }
     }
 
-    public class CalculateMotherDemonDamamge : AbstractCalculateDamage
+    public class CalculateMotherDemonDamage : AbstractCalculateDamage
     {
         public override float CalculateDamage(Color color)
         {
