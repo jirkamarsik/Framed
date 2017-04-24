@@ -157,6 +157,60 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f45a8bf27dfda04499a84eca10dc5fd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &258755554
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2120407974}
+    m_Modifications:
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1001 &358946188
 Prefab:
   m_ObjectHideFlags: 0
@@ -280,7 +334,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360693053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
+  m_LocalPosition: {x: -5, y: 30, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -479,8 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9375ee41ab102b54b840d1dc0dbac759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorPicker: {fileID: 2800000, guid: acb7597a1ed393a42a243aaaa244d934, type: 3}
-  wheelScale: 1
+  colorPicker: {fileID: 2800000, guid: 6872fe61324e440478a0444164c453c1, type: 3}
 --- !u!114 &1049634218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,16 +558,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintballPrefab: {fileID: 1544336307084908, guid: 67f713ebe694e584c897d08d4f96341f,
     type: 2}
-  maxBackwardAngle: 1.3089969
+  paintballColor: {r: 1, g: 0, b: 0, a: 1}
+  maxBackwardAngle: 75
   forwardAngleRatio: 1
   maxBalls: 20
   minSize: 0.15
   maxSize: 0.4
   minSpeed: 10
   maxSpeed: 15
-  handLength: 0.6
   handOffset: {x: 0, y: 1.4, z: 0.3}
   maxPotatoRotation: 10
+  brushDeadzone: 0.1
+  brushHandIdlePos: {x: 0.4, y: 0.25, z: 0.6}
+  brushHandReadyPos: {x: 0, y: 0.6, z: 1}
+  brushTip: {x: 0, y: 0.25, z: 0}
+  brushAngularSpeed: 540
+  dripInterval: 0.01
+--- !u!4 &1049634224 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_PrefabInternal: {fileID: 503251077}
 --- !u!1001 &1186357617
 Prefab:
   m_ObjectHideFlags: 0
@@ -917,6 +980,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f45a8bf27dfda04499a84eca10dc5fd, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1717662527 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: ee8e17113a14bb64d912eda80ce5f6f8, type: 3}
+  m_PrefabInternal: {fileID: 258755554}
 --- !u!1001 &1815751210
 Prefab:
   m_ObjectHideFlags: 0
@@ -963,3 +1030,32 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f45a8bf27dfda04499a84eca10dc5fd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2120407973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2120407974}
+  m_Layer: 0
+  m_Name: BrushHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2120407974
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2120407973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4, y: 0.25, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1717662527}
+  m_Father: {fileID: 1049634224}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

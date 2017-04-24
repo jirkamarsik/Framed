@@ -61,7 +61,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if(!lockCursor)
             {//we force unlock the cursor if the user disable the cursor locking helper
                 Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
             }
         }
 
@@ -91,7 +90,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else if (!m_cursorIsLocked)
             {
                 Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
             }
         }
 
