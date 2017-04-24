@@ -5,7 +5,7 @@ using Es.InkPainter;
 
 public class Splashy : MonoBehaviour
 {
-    public Brush splashBrush;
+    public Brush[] splashBrushes;
     public float splashMinScale = 4.0f;
     public float splashMaxScale = 12.0f;
     public float dropletMinAmount = 6.0f;
@@ -31,6 +31,7 @@ public class Splashy : MonoBehaviour
         {
             var surface = other.transform.parent.gameObject;
             var canvas = surface.GetComponent<InkCanvas>();
+            var splashBrush = splashBrushes[Mathf.FloorToInt(Random.Range(0, splashBrushes.Length - 1e-20f))];
 
             float ballSize = BallSize;
 

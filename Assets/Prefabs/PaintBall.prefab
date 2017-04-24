@@ -108,21 +108,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73adc7b1abbb96d48960f413243eb560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashBrush:
-    brushTexture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
-    brushNormalTexture: {fileID: 2800000, guid: 945b831b22eb06945bf77e00f16ff51a,
-      type: 3}
-    brushHeightTexture: {fileID: 2800000, guid: e1d77a6a5022d4442814ccb50d2a5d9d,
-      type: 3}
+  splashBrushes:
+  - brushTexture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
+    brushNormalTexture: {fileID: 0}
+    brushHeightTexture: {fileID: 0}
     brushScaleU: 0.2
     brushScaleV: 0.2
-    brushNormalBlend: 0.1
-    brushHeightBlend: 0.1
+    brushNormalBlend: 0
+    brushHeightBlend: 0
     brushColor: {r: 1, g: 0, b: 0, a: 1}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
-  splashScale: 3
+  - brushTexture: {fileID: 2800000, guid: f218ed29f9b2ba042b5b00c2bc3ac412, type: 3}
+    brushNormalTexture: {fileID: 0}
+    brushHeightTexture: {fileID: 0}
+    brushScaleU: 0.2
+    brushScaleV: 0.2
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 1, g: 0, b: 0, a: 1}
+    colorBlendType: 0
+    normalBlendType: 0
+    heightBlendType: 0
+  - brushTexture: {fileID: 2800000, guid: e59f4826bdaf827438ab5e2dbe1401ea, type: 3}
+    brushNormalTexture: {fileID: 0}
+    brushHeightTexture: {fileID: 0}
+    brushScaleU: 0.2
+    brushScaleV: 0.2
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 1, g: 0, b: 0, a: 1}
+    colorBlendType: 0
+    normalBlendType: 0
+    heightBlendType: 0
+  splashMinScale: 4
+  splashMaxScale: 12
+  dropletMinAmount: 6
+  dropletMaxAmount: 12
+  dropletMinSize: 0.05
+  dropletMaxSize: 0.2
+  dropletMinReflection: 1
+  dropletMaxReflection: 3
+  dropletScatter: 3
 --- !u!135 &135489777089693810
 SphereCollider:
   m_ObjectHideFlags: 1
