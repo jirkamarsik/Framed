@@ -564,16 +564,14 @@ MonoBehaviour:
   maxBalls: 20
   minSize: 0.15
   maxSize: 0.4
-  minSpeed: 10
-  maxSpeed: 15
-  handOffset: {x: 0, y: 1.4, z: 0.3}
+  minSpeed: 15
+  maxSpeed: 25
+  handOffset: {x: 0, y: 0.6, z: 1}
   maxPotatoRotation: 10
   brushDeadzone: 0.1
   brushHandIdlePos: {x: 0.4, y: 0.25, z: 0.6}
   brushHandReadyPos: {x: 0, y: 0.6, z: 1}
-  brushTip: {x: 0, y: 0.25, z: 0}
   brushAngularSpeed: 540
-  dripInterval: 0.01
 --- !u!4 &1049634224 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}

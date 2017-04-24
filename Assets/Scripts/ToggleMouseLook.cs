@@ -19,6 +19,7 @@ public class ToggleMouseLook : MonoBehaviour {
         prevXSensitivity = mouseLook.XSensitivity;
         prevYSensitivity = mouseLook.YSensitivity;
         mouseLook.SetCursorLock(false);
+        mouseLook.UpdateCursorLock();
         Cursor.lockState = CursorLockMode.Confined;
         mouseLook.XSensitivity = 0;
         mouseLook.YSensitivity = 0;
@@ -27,6 +28,7 @@ public class ToggleMouseLook : MonoBehaviour {
 	public void EnableMouseLook()
     {
         mouseLook.SetCursorLock(true);
+        mouseLook.UpdateCursorLock();
         mouseLook.XSensitivity = prevXSensitivity;
         mouseLook.YSensitivity = prevYSensitivity;
     }
