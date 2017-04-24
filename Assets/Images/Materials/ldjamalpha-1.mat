@@ -6,21 +6,15 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Es.InkPainter.PaintMain
-  m_Shader: {fileID: 4800000, guid: 84e6008ecaa694742ae4606a69d688cb, type: 3}
-  m_ShaderKeywords: INK_PAINTER_COLOR_BLEND_USE_CONTROL
-  m_LightmapFlags: 1
+  m_Name: ldjamalpha-1
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
-    - first:
-        name: _Brush
-      second:
-        m_Texture: {fileID: 2800000, guid: f218ed29f9b2ba042b5b00c2bc3ac412, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -54,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 79ef53e4603f4a44880f5f91d61b85a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -76,21 +70,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: INK_PAINTER_COLOR_BLEND
-      second: 0
-    - first:
-        name: TEXTURE_PAINT_COLOR_BLEND
-      second: 0
-    - first:
-        name: _BrushScale
-      second: 0.023100002
-    - first:
-        name: _BrushScaleU
-      second: 0.010604663
-    - first:
-        name: _BrushScaleV
-      second: 0.007953497
     - first:
         name: _BumpScale
       second: 1
@@ -144,11 +123,5 @@ Material:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
-        name: _ControlColor
-      second: {r: 0.48906612, g: 0, b: 1, a: 1}
-    - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _PaintUV
-      second: {r: 0.41298077, g: 0.50247204, b: 0, a: 0}
