@@ -6,6 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class PaintSlinger : MonoBehaviour {
 
     public GameObject paintballPrefab;
+    public Color paintballColor = Color.red;
     public float maxBackwardAngle = 75 * Mathf.Deg2Rad;
     public float forwardAngleRatio = 1;
     public int maxBalls = 20;
@@ -17,38 +18,21 @@ public class PaintSlinger : MonoBehaviour {
     public Vector3 handOffset = new Vector3(0, 1.4f, 0.3f);
     public float maxPotatoRotation = 10f;
 
+    private ToggleMouseLook toggleMouseLook;
     private MouseLook mouseLook;
     private float prevXSensitivity;
     private float prevYSensitivity;
-    private bool prevCursorLock;
 
 	// Use this for initialization
 	void Start () {
-        mouseLook = this.GetComponent<FirstPersonController>().m_MouseLook;
+        toggleMouseLook = this.GetComponent<ToggleMouseLook>();
 	}
 
-    private void DisableMouseLook()
-    {
-        prevCursorLock = mouseLook.lockCursor;
-        prevXSensitivity = mouseLook.XSensitivity;
-        prevYSensitivity = mouseLook.YSensitivity;
-        mouseLook.SetCursorLock(false);
-        mouseLook.XSensitivity = 0;
-        mouseLook.YSensitivity = 0;
-    }
-
-	private void EnableMouseLook()
-    {
-        mouseLook.SetCursorLock(prevCursorLock);
-        mouseLook.XSensitivity = prevXSensitivity;
-        mouseLook.YSensitivity = prevYSensitivity;
-    }
-	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
         {
-            DisableMouseLook();
+            toggleMouseLook.DisableMouseLook();
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -80,12 +64,13 @@ public class PaintSlinger : MonoBehaviour {
                 Vector3 ballWorldVelocity = this.transform.TransformVector(ballVelocity);
 
                 GameObject ball = Instantiate<GameObject>(paintballPrefab, ballWorldPos, Quaternion.identity);
+                ball.GetComponent<Renderer>().material.color = paintballColor;
                 ball.transform.localScale = new Vector3(ballSize, ballSize, ballSize);
                 ball.GetComponent<Rigidbody>().velocity = ballWorldVelocity;
                 ball.GetComponent<Rigidbody>().AddTorque(maxPotatoRotation * Random.insideUnitSphere);
             }
 
-            EnableMouseLook();
+            toggleMouseLook.EnableMouseLook();
         }
 	}
 }

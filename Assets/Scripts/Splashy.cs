@@ -57,6 +57,8 @@ public class Splashy : MonoBehaviour
                 ballUV.y - splashBrush.ScaleV / 2 > 1)
                 return;
 
+            splashBrush.Color = this.gameObject.GetComponent<Renderer>().material.color;
+
             canvas.PaintUVDirect(splashBrush, ballUV);
         }
     }

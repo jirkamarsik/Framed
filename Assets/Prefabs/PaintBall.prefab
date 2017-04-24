@@ -142,7 +142,7 @@ MonoBehaviour:
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
-  splashMinScale: 4
+  splashMinScale: 6
   splashMaxScale: 12
   dropletMinAmount: 6
   dropletMaxAmount: 12
