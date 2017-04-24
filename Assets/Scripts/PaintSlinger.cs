@@ -82,9 +82,7 @@ public class PaintSlinger : MonoBehaviour {
                 GameObject ball = Instantiate<GameObject>(paintballPrefab, ballWorldPos, Quaternion.identity);
                 ball.transform.localScale = new Vector3(ballSize, ballSize, ballSize);
                 ball.GetComponent<Rigidbody>().velocity = ballWorldVelocity;
-                ball.GetComponent<Rigidbody>().AddTorque(Random.Range(0, maxPotatoRotation),
-                                                         Random.Range(0, maxPotatoRotation),
-                                                         Random.Range(0, maxPotatoRotation));
+                ball.GetComponent<Rigidbody>().AddTorque(maxPotatoRotation * Random.insideUnitSphere);
             }
 
             EnableMouseLook();
