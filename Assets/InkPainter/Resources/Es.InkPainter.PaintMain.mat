@@ -87,10 +87,10 @@ Material:
       second: 0.023100002
     - first:
         name: _BrushScaleU
-      second: 0.010604663
+      second: 0.081757315
     - first:
         name: _BrushScaleV
-      second: 0.007953497
+      second: 0.016351474
     - first:
         name: _BumpScale
       second: 1
@@ -145,10 +145,10 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _ControlColor
-      second: {r: 0.48906612, g: 0, b: 1, a: 1}
+      second: {r: 1, g: 0.6575254, b: 0, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _PaintUV
-      second: {r: 0.41298077, g: 0.50247204, b: 0, a: 0}
+      second: {r: 0.046727847, g: 0.6947115, b: 0, a: 0}
