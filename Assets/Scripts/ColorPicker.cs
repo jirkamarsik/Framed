@@ -17,10 +17,7 @@ public class ColorPicker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(1))
-        {
             toggleMouseLook.DisableMouseLook();
-            Cursor.visible = false;
-        }
 
         if (Input.GetMouseButtonUp(1))
             toggleMouseLook.EnableMouseLook();
@@ -54,6 +51,7 @@ public class ColorPicker : MonoBehaviour {
 
                 Color chosenColor = Color.HSVToRGB(hue, 1, 1);
                 this.GetComponent<PaintSlinger>().paintballColor = chosenColor;
+                this.transform.Find("BrushHand/Brush/Brush_Head").gameObject.GetComponent<Renderer>().material.color = chosenColor;
                 Drawing.DrawLine(screenCenter, new Vector2(mousePos.x, Screen.height - mousePos.y), chosenColor, 10);
             }
         }
