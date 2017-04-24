@@ -114,14 +114,15 @@ MonoBehaviour:
       type: 3}
     brushHeightTexture: {fileID: 2800000, guid: e1d77a6a5022d4442814ccb50d2a5d9d,
       type: 3}
-    brushScale: 0.2
+    brushScaleU: 0.2
+    brushScaleV: 0.2
     brushNormalBlend: 0.1
     brushHeightBlend: 0.1
     brushColor: {r: 1, g: 0, b: 0, a: 1}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
-  splashScale: 0.2
+  splashScale: 3
 --- !u!135 &135489777089693810
 SphereCollider:
   m_ObjectHideFlags: 1
