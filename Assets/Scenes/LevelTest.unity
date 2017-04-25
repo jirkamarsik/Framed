@@ -14617,7 +14617,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 1
+        toState: Start Levels
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -23433,7 +23433,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 98
-        y: 260
+        y: 276
         width: 100
         height: 32
       isBreakpoint: 0
@@ -23695,7 +23695,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 265.64062
-        y: 256.8125
+        y: 272.8125
         width: 100
         height: 48
       isBreakpoint: 0
@@ -24092,7 +24092,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 872.0078
-        y: 121.97656
+        y: 137.97656
         width: 100
         height: 48
       isBreakpoint: 0
@@ -24264,7 +24264,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 484
-        y: 264
+        y: 280
         width: 100
         height: 80
       isBreakpoint: 0
@@ -24291,7 +24291,7 @@ MonoBehaviour:
           name: GotHit
           isSystemEvent: 0
           isGlobal: 0
-        toState: GotHit
+        toState: CalcDamage
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -24651,7 +24651,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 211.99219
-        y: 435.3828
+        y: 451.3828
         width: 100
         height: 48
       isBreakpoint: 0
@@ -24670,7 +24670,7 @@ MonoBehaviour:
           name: GotHit
           isSystemEvent: 0
           isGlobal: 0
-        toState: GotHit
+        toState: CalcDamage
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -24956,7 +24956,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 483.5
-        y: 433.77344
+        y: 449.77344
         width: 100
         height: 48
       isBreakpoint: 0
@@ -24975,7 +24975,7 @@ MonoBehaviour:
           name: GotHit
           isSystemEvent: 0
           isGlobal: 0
-        toState: GotHit
+        toState: CalcDamage
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -25261,7 +25261,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 715.2969
-        y: 361
+        y: 377
         width: 100
         height: 48
       isBreakpoint: 0
@@ -25411,7 +25411,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 700
-        y: 234
+        y: 250
         width: 100
         height: 32
       isBreakpoint: 0
@@ -25619,7 +25619,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 698
-        y: 280
+        y: 296
         width: 100
         height: 32
       isBreakpoint: 0
@@ -25826,8 +25826,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 488.375
-        y: 179.84375
+        x: 469.375
+        y: 103.84375
         width: 100
         height: 32
       isBreakpoint: 0
@@ -26324,12 +26324,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: Damage
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: -0.1
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -26406,7 +26406,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 65.8125
-        y: 358.27344
+        y: 374.27344
         width: 100
         height: 16
       isBreakpoint: 0
@@ -26484,7 +26484,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 665
-        y: 109.96875
+        y: 125.96875
         width: 142
         height: 48
       isBreakpoint: 0
@@ -26629,7 +26629,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 211.63281
-        y: 349.9922
+        y: 365.9922
         width: 129
         height: 32
       isBreakpoint: 0
@@ -26803,6 +26803,99 @@ MonoBehaviour:
         - realTime
         paramDataPos: 000000000000000000000000000000000100000001000000010000000100000005000000060000000200000002000000020000000a0000000b0000000300000003000000030000000f00000010000000000000000000000014000000
         paramByteDataSize: 0000000000000000000000000100000004000000000000000000000000000000010000000400000000000000000000000000000001000000040000000000000000000000000000000100000004000000000000000000000001000000
+    - name: CalcDamage
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 472.8203
+        y: 198.46875
+        width: 102
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: GotHit
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - Framed.PlaymakerActions.CalculateMotherDemonDamage
+        - HutongGames.PlayMaker.Actions.FloatMultiply
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: ac6ed4029845b305
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: BallHit
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: Damage
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Damage
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: -0.1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000000f0000000f0000000f00000001000000
+        paramName:
+        - inputPaintBall
+        - outputDamage
+        - floatVariable
+        - multiplyBy
+        - everyFrame
+        paramDataPos: 0000000000000000010000000200000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -26846,6 +26939,12 @@ MonoBehaviour:
     globalTransitions: []
     variables:
       floatVariables:
+      - useVariable: 1
+        name: Damage
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       - useVariable: 1
         name: DistanceWall1
         tooltip: 
@@ -26922,7 +27021,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 1
@@ -26932,7 +27031,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -27624,7 +27723,7 @@ MonoBehaviour:
       - fsmEvent:
           name: Death
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: DeathAnimation
         linkStyle: 0
         linkConstraint: 0
@@ -27633,7 +27732,7 @@ MonoBehaviour:
           name: GotHit
           isSystemEvent: 0
           isGlobal: 0
-        toState: GotHit
+        toState: CalcDamage
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -28079,7 +28178,7 @@ MonoBehaviour:
       - fsmEvent:
           name: Death
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: Death
         linkStyle: 0
         linkConstraint: 0
@@ -28330,7 +28429,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010101010101
-        actionIsOpen: 00000000000000
+        actionIsOpen: 01000000000000
         actionStartIndex: 000000000400000006000000080000000a0000000f00000014000000
         actionHashCodes: 2a6e8a005ac852045ac852045ac852045f9135045f91350448c01101
         unityObjectParams: []
@@ -28778,12 +28877,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: Damage
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: -0.1
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -29875,6 +29974,99 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: CalcDamage
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 410
+        y: 173
+        width: 102
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: GotHit
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - Framed.PlaymakerActions.CalculateFireDemonDamage
+        - HutongGames.PlayMaker.Actions.FloatMultiply
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: ac6ed4029845b305
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: BallHit
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: Damage
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Damage
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: -0.1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000000f0000000f0000000f00000001000000
+        paramName:
+        - inputPaintBall
+        - outputDamage
+        - floatVariable
+        - multiplyBy
+        - everyFrame
+        paramDataPos: 0000000000000000010000000200000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -29906,6 +30098,12 @@ MonoBehaviour:
     globalTransitions: []
     variables:
       floatVariables:
+      - useVariable: 1
+        name: Damage
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       - useVariable: 1
         name: DistanceWall1
         tooltip: 
@@ -29964,7 +30162,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 1
@@ -31018,7 +31216,7 @@ MonoBehaviour:
           name: GotHit
           isSystemEvent: 0
           isGlobal: 0
-        toState: GotHit
+        toState: CalcDamage
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -31720,8 +31918,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 263
-        y: 168.86719
+        x: 208
+        y: 109.86719
         width: 100
         height: 32
       isBreakpoint: 0
@@ -31754,7 +31952,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010101010101
-        actionIsOpen: 00000000000001
+        actionIsOpen: 01000000000001
         actionStartIndex: 000000000400000006000000080000000a0000000f00000014000000
         actionHashCodes: 2a6e8a005ac852045ac852045ac852045f9135045f91350448c01101
         unityObjectParams: []
@@ -32202,12 +32400,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: Damage
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: -0.1
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -32834,7 +33032,7 @@ MonoBehaviour:
           name: GotHit
           isSystemEvent: 0
           isGlobal: 0
-        toState: GotHit
+        toState: CalcDamage
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -33849,6 +34047,99 @@ MonoBehaviour:
         - realTime
         paramDataPos: 00000000000000000000000000000000000000000100000000000000010000000000000001000000000000000100000002000000010000000200000005000000060000000300000002000000030000000a0000000b0000000400000003000000040000000f00000010000000020000000100000014000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000100000004000000000000000000000000000000010000000400000000000000000000000000000001000000040000000000000000000000000000000100000004000000000000000000000001000000
+    - name: CalcDamage
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 254
+        y: 179
+        width: 102
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: GotHit
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - Framed.PlaymakerActions.CalculateWaterDemonDamage
+        - HutongGames.PlayMaker.Actions.FloatMultiply
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: ac6ed4029845b305
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: BallHit
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: Damage
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Damage
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: -0.1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000000f0000000f0000000f00000001000000
+        paramName:
+        - inputPaintBall
+        - outputDamage
+        - floatVariable
+        - multiplyBy
+        - everyFrame
+        paramDataPos: 0000000000000000010000000200000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -33883,6 +34174,12 @@ MonoBehaviour:
     globalTransitions: []
     variables:
       floatVariables:
+      - useVariable: 1
+        name: Damage
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       - useVariable: 1
         name: DistanceWall1
         tooltip: 
@@ -33947,7 +34244,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 1
@@ -33957,7 +34254,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0

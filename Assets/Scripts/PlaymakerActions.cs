@@ -29,7 +29,7 @@ namespace Framed.PlaymakerActions {
     {
         public override float CalculateDamage(Color color)
         {
-            return 2.0f * color.r - 0.5f * color.g + color.b;
+            return 2.0f * color.r - 1f * color.g + color.b;
         }
     }
 
@@ -38,7 +38,7 @@ namespace Framed.PlaymakerActions {
     {
         public override float CalculateDamage(Color color)
         {
-            return 2.0f * color.b - 0.5f * color.r + color.g;
+            return 2.0f * color.b - 1f * color.r + color.g;
         }
     }
 
@@ -46,7 +46,7 @@ namespace Framed.PlaymakerActions {
     {
         public override float CalculateDamage(Color color)
         {
-            return 2.0f * color.g - 0.5f * color.b + color.r;
+            return 2.0f * color.g - 1f * color.b + color.r;
         }
     }
 }
