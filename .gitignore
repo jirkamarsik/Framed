@@ -49,3 +49,6 @@ GameCode/obj
 Assets/Frameworks/FSharp.Core.xml*
 Assets/Frameworks/GameCode.dll.mdb*
 Assets/Frameworks/GameCode.pdb*
+
+# Ignore screenshots
+screen*.png
