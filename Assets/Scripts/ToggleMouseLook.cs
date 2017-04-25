@@ -14,6 +14,14 @@ public class ToggleMouseLook : MonoBehaviour {
         mouseLook = this.GetComponent<FirstPersonController>().m_MouseLook;
 	}
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+        }
+    }
+
     public void DisableMouseLook()
     {
         prevXSensitivity = mouseLook.XSensitivity;
