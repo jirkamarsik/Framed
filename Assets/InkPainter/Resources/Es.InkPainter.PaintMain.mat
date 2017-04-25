@@ -18,7 +18,7 @@ Material:
     - first:
         name: _Brush
       second:
-        m_Texture: {fileID: 2800000, guid: e59f4826bdaf827438ab5e2dbe1401ea, type: 3}
+        m_Texture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -87,10 +87,10 @@ Material:
       second: 0.023100002
     - first:
         name: _BrushScaleU
-      second: 0.054732278
+      second: 0.007754872
     - first:
         name: _BrushScaleV
-      second: 0.014595274
+      second: 0.005816154
     - first:
         name: _BumpScale
       second: 1
@@ -145,10 +145,10 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _ControlColor
-      second: {r: 0, g: 1, b: 0.6345067, a: 1}
+      second: {r: 0.021695137, g: 0, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _PaintUV
-      second: {r: 0.15536296, g: 0.6677523, b: 0, a: 0}
+      second: {r: 0.91472405, g: 0.60396296, b: 0, a: 0}
