@@ -558,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintballPrefab: {fileID: 1544336307084908, guid: 67f713ebe694e584c897d08d4f96341f,
     type: 2}
-  paintballColor: {r: 1, g: 0, b: 0, a: 1}
+  paintballColor: {r: 1, g: 1, b: 1, a: 1}
   maxBackwardAngle: 75
   forwardAngleRatio: 1
   maxBalls: 20
@@ -566,7 +566,6 @@ MonoBehaviour:
   maxSize: 0.4
   minSpeed: 15
   maxSpeed: 25
-  handOffset: {x: 0, y: 0.6, z: 1}
   maxPotatoRotation: 10
   brushDeadzone: 0.1
   brushHandIdlePos: {x: 0.4, y: 0.25, z: 0.6}
