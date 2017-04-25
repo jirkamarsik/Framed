@@ -561,11 +561,11 @@ MonoBehaviour:
   paintballColor: {r: 1, g: 1, b: 1, a: 1}
   maxBackwardAngle: 75
   forwardAngleRatio: 1
-  maxBalls: 20
-  minSize: 0.15
-  maxSize: 0.4
-  minSpeed: 15
-  maxSpeed: 25
+  maxBalls: 15
+  minSize: 0.02
+  maxSize: 0.25
+  minSpeed: 3
+  maxSpeed: 15
   maxPotatoRotation: 10
   brushDeadzone: 0.1
   brushHandIdlePos: {x: 0.4, y: 0.25, z: 0.6}
